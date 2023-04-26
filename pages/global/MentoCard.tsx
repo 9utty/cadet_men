@@ -7,7 +7,6 @@ const { useBreakpoint } = Grid;
 const MentoCard = () => {
   const screens = useBreakpoint();
   const cardWidth = screens.xs ? 140 : 240;
-  console.log(cardWidth);
 
   return (
     <Card
