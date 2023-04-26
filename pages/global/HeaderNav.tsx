@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { Menu, Input, Drawer } from "antd";
 import { FaRegUser } from "react-icons/fa";
 import { HiHashtag, HiMenu } from "react-icons/hi";
