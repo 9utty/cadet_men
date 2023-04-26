@@ -28,32 +28,27 @@ const HeaderNav = () => {
           disabled
         >
           <Link href="/home/Manito" passHref legacyBehavior>
-            <a style={{ display: "inline-block" }}>
-              <img
-                src="https://user-images.githubusercontent.com/86397600/234616707-af3756a9-c114-4b39-92ac-758c22e388f7.png"
-                alt="42Manito"
-                height="50"
-                width="120"
-              />
+            <a>
+              <div style={{ fontSize: "20px", color: "#000" }}>42 Manito</div>
             </a>
           </Link>
         </Menu.Item>
         <Menu.Item>
           <Link href="/category/Category" passHref legacyBehavior>
-            <a style={{ display: "inline-block" }}>
+            <a style={{ display: "inline-block", paddingTop: "13px" }}>
               <HiHashtag style={{ fontSize: "20px" }} />
             </a>
           </Link>
         </Menu.Item>
         <Menu.Item>
           <Link href="/login/Login" passHref legacyBehavior>
-            <a style={{ display: "inline-block" }}>
+            <a style={{ display: "inline-block", paddingTop: "13px" }}>
               <FaRegUser style={{ fontSize: "20px" }} />
             </a>
           </Link>
         </Menu.Item>
         <Menu.Item onClick={showDrawer}>
-          <a style={{ display: "inline-block" }}>
+          <a style={{ display: "inline-block", paddingTop: "13px" }}>
             <HiMenu style={{ fontSize: "20px" }} />
           </a>
         </Menu.Item>
