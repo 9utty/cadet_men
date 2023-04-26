@@ -1,4 +1,4 @@
-import { GlobalSlice } from "./slices/Global";
+import { GlobalSlice } from "./slices/globalSlice";
 import { combineReducers } from "redux";
 import { MentoCardSlice } from "./slices/mentoCardSlice";
 

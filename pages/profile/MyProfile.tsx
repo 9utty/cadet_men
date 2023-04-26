@@ -5,12 +5,12 @@ interface ProfileProps {
   isMy: boolean;
 }
 
-const Profile = (props: ProfileProps) => {
+const MyProfile = (props: ProfileProps) => {
   return (
     <AppLayout>
-      <div>프로필페이지입니다.</div>
+      <div style={{ color: "blue" }}>프로필페이지입니다.</div>
     </AppLayout>
   );
 };
 
-export default Profile;
+export default MyProfile;

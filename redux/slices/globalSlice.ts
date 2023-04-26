@@ -6,7 +6,7 @@ interface Auth {
 }
 
 const initialState = {
-  isLogin: false,
+  isLogin: true, // TODO : 현재는 로그인되어있다고 가정하고 만들기 때문에 로그인 구현시엔 false
   userId: 0,
   AccessToken: "",
 };
