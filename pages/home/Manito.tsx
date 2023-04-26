@@ -36,7 +36,7 @@ export default function Manito() {
               <MentoCard
                 image="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
                 userNickName="gulee"
-                descripttion="42Manito 프론트엔드 개발자입니다."
+                description="42Manito 프론트엔드 개발자입니다."
                 hashtag={["Frontend", "Vocal"]}
               />
             </Col>

@@ -7,7 +7,7 @@ const { useBreakpoint } = Grid;
 interface Card {
   image: string;
   userNickName: string;
-  descripttion: string;
+  description: string;
   hashtag: string[];
 }
 
@@ -38,13 +38,13 @@ const MentoCard = (props: Card) => {
           marginBottom: "8px",
         }}
       >
-        {props.descripttion}
+        {props.description}
       </div>
       {hashtags.map((tag) => (
         <div
           key={tag}
           style={{
-            fontSize: screens.xs ? "12px" : "20px",
+            fontSize: screens.xs ? "10px" : "18px",
             color: screens.xs ? "#222" : "#222",
           }}
         >{`#${tag}`}</div>
