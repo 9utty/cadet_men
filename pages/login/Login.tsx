@@ -2,7 +2,7 @@ import React from "react";
 import AppLayout from "../global/AppLayout";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/reducer";
-import MyProfile from "../profile/MyProfile";
+import MyProfile from "../profiles/MyProfile";
 
 const Login = () => {
   const isLogin = useSelector((state: RootState) => state.global.isLogin);
