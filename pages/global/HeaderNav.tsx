@@ -10,7 +10,7 @@ const HeaderNav = () => {
         mode="horizontal"
         style={{ display: "flex", justifyContent: "flex-end" }}
       >
-        <Menu.Item style={{ flex: 1 }}>
+        <Menu.Item style={{ flex: 1 }} className="header-menu-item" disabled>
           <Link href="/home/Manito" passHref legacyBehavior>
             <a>42Manito</a>
           </Link>
@@ -31,15 +31,6 @@ const HeaderNav = () => {
           <Input.Search enterButton style={{ verticalAlign: "middle" }} />
         </Menu.Item>
       </Menu>
-      <style jsx>{`
-        .ant-menu-horizontal {
-          font-size: 18px;
-        }
-        .ant-menu-horizontal .ant-menu-item,
-        .ant-menu-horizontal .ant-menu-submenu-title {
-          font-weight: bold;
-        }
-      `}</style>
     </div>
   );
 };

@@ -15,22 +15,20 @@ const AppLayout = ({ children }: Props) => {
 
   return (
     <div>
-      <Row>
-        <Col xs={24} md={8}>
-          <Layout className="layout" style={{ backgroundColor: "white" }}>
-            <HeaderNav />
-            <Content style={{ padding: "0 50px", marginTop: 64 }}>
-              <div
-                className="site-layout-content"
-                style={{ background: colorBgContainer }}
-              >
-                {children}
-              </div>
-            </Content>
-            <Footer style={{ textAlign: "center" }}>42Manito ©2023</Footer>
-          </Layout>
-        </Col>
-      </Row>
+      <Layout className="layout" style={{ backgroundColor: "white" }}>
+        <HeaderNav />
+        <Content style={{ padding: "0 50px", marginTop: 64 }}>
+          <div
+            className="site-layout-content"
+            style={{ background: colorBgContainer }}
+          >
+            {children}
+          </div>
+        </Content>
+        <Footer style={{ textAlign: "center", marginTop: "5px" }}>
+          42Manito ©2023
+        </Footer>
+      </Layout>
     </div>
   );
 };
