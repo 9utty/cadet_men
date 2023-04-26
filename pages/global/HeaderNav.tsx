@@ -1,8 +1,20 @@
+import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Menu, Input, Row, Col } from "antd";
+import { Menu, Input, Row, Col, Drawer, Button } from "antd";
+import { FaRegUser } from "react-icons/fa";
+import { HiHashtag, HiMenu } from "react-icons/hi";
 
 const HeaderNav = () => {
+  const [visible, setVisible] = useState(false);
+
+  const showDrawer = () => {
+    setVisible(true);
+  };
+
+  const onClose = () => {
+    setVisible(false);
+  };
   return (
     <div>
       <Menu
@@ -29,28 +41,39 @@ const HeaderNav = () => {
         <Menu.Item>
           <Link href="/category/Category" passHref legacyBehavior>
             <a style={{ display: "inline-block" }}>
-              <img
-                src="https://user-images.githubusercontent.com/86397600/234616714-c09349ad-1d96-42d4-9fcc-b98db4bc116a.png"
-                alt="카테고리"
-                height="40"
-                width="60"
-              />
+              <HiHashtag style={{ fontSize: "20px" }} />
             </a>
           </Link>
         </Menu.Item>
         <Menu.Item>
           <Link href="/login/Login" passHref legacyBehavior>
             <a style={{ display: "inline-block" }}>
-              <img
-                src="https://user-images.githubusercontent.com/86397600/234616717-0d52abfe-7e21-41e1-872e-b044fcdde305.png"
-                alt="로그인"
-                height="40"
-                width="47"
-              />
+              <FaRegUser style={{ fontSize: "20px" }} />
             </a>
           </Link>
         </Menu.Item>
+        <Menu.Item onClick={showDrawer}>
+          <a style={{ display: "inline-block" }}>
+            <HiMenu style={{ fontSize: "20px" }} />
+          </a>
+        </Menu.Item>
       </Menu>
+      <Drawer
+        title="Menu"
+        width={180}
+        placement="right"
+        closable={false}
+        onClose={onClose}
+        open={visible}
+      >
+        <Menu>
+          <Menu.Item>
+            <Link href="/ranking/Ranking" passHref legacyBehavior>
+              <a onClick={onClose}>Ranking</a>
+            </Link>
+          </Menu.Item>
+        </Menu>
+      </Drawer>
       <Menu theme="dark" mode="horizontal" multiple={true}>
         <Menu.Item style={{ flex: 2 }}>
           <Input.Search enterButton style={{ verticalAlign: "middle" }} />
