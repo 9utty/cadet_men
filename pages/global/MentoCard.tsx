@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Grid } from "antd";
+import { Card, Grid, Divider } from "antd";
 
 const { Meta } = Card;
 const { useBreakpoint } = Grid;
@@ -21,14 +21,33 @@ const MentoCard = (props: Card) => {
       style={{ width: cardWidth }}
       cover={<img alt="example" src={props.image} />}
     >
-      <Meta
-        title={props.userNickName}
-        style={{ fontSize: screens.xs ? 20 : 25 }}
-      />
-      <Meta description={props.descripttion} />
-      {/* 최대 3개 요소까지만 출력 */}
+      <div
+        style={{
+          fontSize: screens.xs ? "15px" : "25px",
+          color: screens.xs ? "#000" : "#000",
+          fontWeight: "bold",
+          marginBottom: "8px",
+        }}
+      >
+        {props.userNickName}
+      </div>
+      <div
+        style={{
+          fontSize: screens.xs ? "12px" : "20px",
+          color: screens.xs ? "#888" : "#888",
+          marginBottom: "8px",
+        }}
+      >
+        {props.descripttion}
+      </div>
       {hashtags.map((tag) => (
-        <Meta key={tag} description={`#${tag}`} />
+        <div
+          key={tag}
+          style={{
+            fontSize: screens.xs ? "12px" : "20px",
+            color: screens.xs ? "#222" : "#222",
+          }}
+        >{`#${tag}`}</div>
       ))}
     </Card>
   );
