@@ -1,7 +1,7 @@
 import React from "react";
 import AppLayout from "../global/AppLayout";
 
-export default function Mento() {
+export default function Mentor() {
   return (
     <AppLayout>
       {" "}

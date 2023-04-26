@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Grid, Divider } from "antd";
+import { Card, Grid, Divider, Image } from "antd";
 
 const { Meta } = Card;
 const { useBreakpoint } = Grid;
@@ -11,7 +11,7 @@ interface Card {
   hashtag: string[];
 }
 
-const MentoCard = (props: Card) => {
+const MentorCard = (props: Card) => {
   const screens = useBreakpoint();
   const cardWidth = screens.xs ? 140 : 240;
   const hashtags = props.hashtag.slice(0, 2);
@@ -25,7 +25,15 @@ const MentoCard = (props: Card) => {
     <Card
       hoverable
       style={{ width: cardWidth }}
-      cover={<img alt="example" src={props.image} />}
+      cover={
+        <Image
+          alt="example"
+          src={props.image}
+          height={screens.xs ? 140 : 240}
+          width={screens.xs ? 140 : 240}
+          style={{ objectFit: "cover", borderRadius: "50%" }}
+        />
+      }
     >
       <div
         style={{
@@ -59,4 +67,4 @@ const MentoCard = (props: Card) => {
   );
 };
 
-export default MentoCard;
+export default MentorCard;

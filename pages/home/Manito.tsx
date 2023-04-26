@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import AppLayout from "../global/AppLayout";
-import MentoCard from "../global/MentoCard";
+import MentorCard from "../global/MentorCard";
 import { Row, Col, Spin } from "antd";
 import InfiniteScroll from "react-infinite-scroll-component";
 
@@ -33,7 +33,7 @@ export default function Manito() {
         <Row gutter={[16, 16]}>
           {cards.map((card) => (
             <Col xs={12} sm={12} md={12} lg={8} xl={6} key={card}>
-              <MentoCard
+              <MentorCard
                 image="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
                 userNickName="gulee"
                 description="42Manito 프론트엔드 개발자입니다. 그리고 Rush03에서 보컬을 하고 있습니다."
