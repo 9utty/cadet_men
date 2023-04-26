@@ -6,7 +6,7 @@ import StudyCategory from "./StudyCategory";
 import HobbyCategory from "./HobbyCategory";
 
 const MenuCategory = () => {
-  const [isStudy, setIsStudy] = useState(false);
+  const [isStudy, setIsStudy] = useState(true);
   const onStudy = () => {
     setIsStudy(true);
   };
