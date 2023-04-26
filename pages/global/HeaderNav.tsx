@@ -54,7 +54,7 @@ const HeaderNav = () => {
         </Menu.Item>
       </Menu>
       <Drawer
-        title="Menu"
+        title="메뉴"
         width={180}
         placement="right"
         closable={false}
@@ -64,7 +64,12 @@ const HeaderNav = () => {
         <Menu>
           <Menu.Item>
             <Link href="/ranking/Ranking" passHref legacyBehavior>
-              <a onClick={onClose}>Ranking</a>
+              <a onClick={onClose}>랭킹</a>
+            </Link>
+          </Menu.Item>
+          <Menu.Item>
+            <Link href="/feedbackLog/FeedbackLog" passHref legacyBehavior>
+              <a onClick={onClose}>후기</a>
             </Link>
           </Menu.Item>
         </Menu>
