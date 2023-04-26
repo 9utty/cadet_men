@@ -5,6 +5,30 @@ export default function Manito() {
   return (
     <AppLayout>
       <div style={{ color: "black" }}>홈입니다</div>
+      <div style={{ color: "black" }}>홈입니다</div>
+      <div style={{ color: "black" }}>홈입니다</div>
+      <div style={{ color: "black" }}>홈입니다</div>
+      <div style={{ color: "black" }}>홈입니다</div>
+      <div style={{ color: "black" }}>홈입니다</div>
+      <div style={{ color: "black" }}>홈입니다</div>
+      <div style={{ color: "black" }}>홈입니다</div>
+      <div style={{ color: "black" }}>홈입니다</div>
+      <div style={{ color: "black" }}>홈입니다</div>
+      <div style={{ color: "black" }}>홈입니다</div>
+      <div style={{ color: "black" }}>홈입니다</div>
+      <div style={{ color: "black" }}>홈입니다</div>
+      <div style={{ color: "black" }}>홈입니다</div>
+      <div style={{ color: "black" }}>홈입니다</div>
+      <div style={{ color: "black" }}>홈입니다</div>
+      <div style={{ color: "black" }}>홈입니다</div>
+      <div style={{ color: "black" }}>홈입니다</div>
+      <div style={{ color: "black" }}>홈입니다</div>
+      <div style={{ color: "black" }}>홈입니다</div>
+      <div style={{ color: "black" }}>홈입니다</div>
+      <div style={{ color: "black" }}>홈입니다</div>
+      <div style={{ color: "black" }}>홈입니다</div>
+      <div style={{ color: "black" }}>홈입니다</div>
+      <div style={{ color: "black" }}>홈입니다</div>
     </AppLayout>
   );
 }
