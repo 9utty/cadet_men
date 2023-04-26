@@ -1,81 +1,43 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import AppLayout from "../global/AppLayout";
 import MentoCard from "../global/MentoCard";
-import { Row, Col } from "antd";
+import { Row, Col, Spin } from "antd";
+import InfiniteScroll from "react-infinite-scroll-component";
 
 export default function Manito() {
+  const [cards, setCards] = useState(Array.from({ length: 12 }, (_, i) => i)); // 초기 데이터
+
+  const fetchMoreData = () => {
+    // 추가 데이터 불러오기
+    setCards([
+      ...cards,
+      ...Array.from({ length: 12 }, (_, i) => i + cards.length),
+    ]);
+  };
+
   return (
     <AppLayout>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
+      <InfiniteScroll
+        dataLength={cards.length}
+        next={fetchMoreData}
+        hasMore={true} // 추가 데이터가 더 있는 경우
+        loader={
+          <div
+            className="example"
+            style={{ verticalAlign: "middle", alignContent: "center" }}
+          >
+            <Spin />
+          </div>
+        }
       >
         <Row gutter={[16, 16]}>
-          <Col xs={12} sm={12} md={12} lg={8} xl={6}>
-            <MentoCard />
-          </Col>
-          <Col xs={12} sm={12} md={12} lg={8} xl={6}>
-            <MentoCard />
-          </Col>
-          <Col xs={12} sm={12} md={12} lg={8} xl={6}>
-            <MentoCard />
-          </Col>
-          <Col xs={12} sm={12} md={12} lg={8} xl={6}>
-            <MentoCard />
-          </Col>
-          <Col xs={12} sm={12} md={12} lg={8} xl={6}>
-            <MentoCard />
-          </Col>
-          <Col xs={12} sm={12} md={12} lg={8} xl={6}>
-            <MentoCard />
-          </Col>
-          <Col xs={12} sm={12} md={12} lg={8} xl={6}>
-            <MentoCard />
-          </Col>
-          <Col xs={12} sm={12} md={12} lg={8} xl={6}>
-            <MentoCard />
-          </Col>
-          <Col xs={12} sm={12} md={12} lg={8} xl={6}>
-            <MentoCard />
-          </Col>
-          <Col xs={12} sm={12} md={12} lg={8} xl={6}>
-            <MentoCard />
-          </Col>
-          <Col xs={12} sm={12} md={12} lg={8} xl={6}>
-            <MentoCard />
-          </Col>
-          <Col xs={12} sm={12} md={12} lg={8} xl={6}>
-            <MentoCard />
-          </Col>
-          <Col xs={12} sm={12} md={12} lg={8} xl={6}>
-            <MentoCard />
-          </Col>
-          <Col xs={12} sm={12} md={12} lg={8} xl={6}>
-            <MentoCard />
-          </Col>
-          <Col xs={12} sm={12} md={12} lg={8} xl={6}>
-            <MentoCard />
-          </Col>
-          <Col xs={12} sm={12} md={12} lg={8} xl={6}>
-            <MentoCard />
-          </Col>
-          <Col xs={12} sm={12} md={12} lg={8} xl={6}>
-            <MentoCard />
-          </Col>
-          <Col xs={12} sm={12} md={12} lg={8} xl={6}>
-            <MentoCard />
-          </Col>
-          <Col xs={12} sm={12} md={12} lg={8} xl={6}>
-            <MentoCard />
-          </Col>
-          <Col xs={12} sm={12} md={12} lg={8} xl={6}>
-            <MentoCard />
-          </Col>
+          {cards.map((card) => (
+            <Col xs={12} sm={12} md={12} lg={8} xl={6} key={card}>
+              <MentoCard />
+            </Col>
+          ))}
         </Row>
-      </div>
+      </InfiniteScroll>
     </AppLayout>
   );
 }
