@@ -13,7 +13,7 @@ interface Card {
 
 const MentorCard = (props: Card) => {
   const screens = useBreakpoint();
-  const cardWidth = screens.xs ? 140 : 240;
+  const cardWidth = screens.xs ? 120 : 240;
   const hashtags = props.hashtag.slice(0, 2);
   const maxDescriptionLength = screens.xs ? 32 : 40;
   const truncatedDescription =
@@ -29,8 +29,8 @@ const MentorCard = (props: Card) => {
         <Image
           alt="example"
           src={props.image}
-          height={screens.xs ? 140 : 240}
-          width={screens.xs ? 140 : 240}
+          height={screens.xs ? 120 : 240}
+          width={screens.xs ? 120 : 240}
           style={{ objectFit: "cover", borderRadius: "50%" }}
         />
       }

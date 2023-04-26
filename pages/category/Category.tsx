@@ -1,10 +1,14 @@
+import React from "react";
 import App from "../_app";
 import AppLayout from "../global/AppLayout";
+import Link from "next/link";
+import { Menu, Row, Col, Divider } from "antd";
+import MenuCategory from "./components/MenuCategory";
 
 export default function Category() {
   return (
     <AppLayout>
-      <div style={{ color: "black" }}>카테고리입니다.</div>
+      <MenuCategory />
     </AppLayout>
   );
 }
