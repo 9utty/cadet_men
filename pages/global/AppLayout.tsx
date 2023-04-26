@@ -1,24 +1,37 @@
-import Link from "next/link";
-import { Menu } from "antd";
+import React from "react";
+import { Layout, theme } from "antd";
+import HeaderNav from "./HeaderNav";
 
-export default function AppLayout() {
+const { Header, Content, Footer } = Layout;
+
+type Props = {
+  children: React.ReactNode;
+};
+
+const AppLayout = ({ children }: Props) => {
+  const {
+    token: { colorBgContainer },
+  } = theme.useToken();
+
   return (
     <div>
-      <div>42Manito</div>
-      <Menu mode="horizontal" theme="dark">
-        <Menu.Item>
-          <Link href="/home/Home">홈</Link>
-        </Menu.Item>
-        <Menu.Item>
-          <Link href="/mento/Mento">멘토</Link>
-        </Menu.Item>
-        <Menu.Item>
-          <Link href="/category/Category">카테고리</Link>
-        </Menu.Item>
-        <Menu.Item>
-          <Link href="/search/Search">검색</Link>
-        </Menu.Item>
-      </Menu>
+      <Layout className="layout">
+        <Header>
+          <div className="logo" />
+          <HeaderNav />
+        </Header>
+        <Content style={{ padding: "0 50px", marginTop: 64 }}>
+          <div
+            className="site-layout-content"
+            style={{ background: colorBgContainer }}
+          >
+            {children}
+          </div>
+        </Content>
+        <Footer style={{ textAlign: "center" }}>42Manito ©2023</Footer>
+      </Layout>
     </div>
   );
-}
+};
+
+export default AppLayout;

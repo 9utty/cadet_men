@@ -1,3 +1,9 @@
+import AppLayout from "../global/AppLayout";
+
 export default function Search() {
-  return <div>서치입니다</div>;
+  return (
+    <AppLayout>
+      <div style={{ color: "black" }}>서치입니다</div>
+    </AppLayout>
+  );
 }
