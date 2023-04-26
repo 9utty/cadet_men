@@ -33,7 +33,12 @@ export default function Manito() {
         <Row gutter={[16, 16]}>
           {cards.map((card) => (
             <Col xs={12} sm={12} md={12} lg={8} xl={6} key={card}>
-              <MentoCard />
+              <MentoCard
+                image="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+                userNickName="gulee"
+                descripttion="42Manito 프론트엔드 개발자입니다."
+                hashtag={["Frontend", "Vocal"]}
+              />
             </Col>
           ))}
         </Row>
