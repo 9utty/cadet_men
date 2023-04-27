@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Menu, Divider } from "antd";
+import TotalRanking from "./Total";
+import MonthlyRanking from "./Month";
 
 const MenuRanking = () => {
   const [isTotal, setIsTotal] = useState(true);
@@ -22,27 +24,28 @@ const MenuRanking = () => {
         <Menu.Item key="total" onClick={onTotal}>
           <div
             style={{
-              fontSize: "25px",
-              marginLeft: "10px",
-              marginRight: "10px",
+              fontSize: "20px",
+              marginLeft: "5px",
+              marginRight: "5px",
             }}
           >
-            Total Ranking
+            Total
           </div>
         </Menu.Item>
         <Divider type="vertical" />
         <Menu.Item key="month" onClick={onMonth}>
           <div
             style={{
-              fontSize: "25px",
-              marginLeft: "10px",
-              marginRight: "10px",
+              fontSize: "20px",
+              marginLeft: "5px",
+              marginRight: "5px",
             }}
           >
-            Monthly Ranking
+            Monthly
           </div>
         </Menu.Item>
       </Menu>
+      {isTotal ? <TotalRanking /> : <MonthlyRanking />}
     </>
   );
 };

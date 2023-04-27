@@ -1,28 +1,23 @@
 import React from "react";
 import { Card, Grid, Divider, Image } from "antd";
 import Link from "next/link";
+import MentorProfile from "@/pages/profiles/MentorProfile";
+
 const { Meta } = Card;
 const { useBreakpoint } = Grid;
 
 interface Card {
   image: string;
   userNickName: string;
-  description: string;
-  hashtag: string[];
+  count: number;
 }
 
-const MentorCard = (props: Card) => {
+const RankingCard = (props: Card) => {
   const screens = useBreakpoint();
   const cardWidth = screens.xs ? 120 : 240;
-  const hashtags = props.hashtag.slice(0, 2);
   const maxDescriptionLength = screens.xs ? 32 : 40;
-  const truncatedDescription =
-    props.description.length > maxDescriptionLength
-      ? `${props.description.substring(0, maxDescriptionLength)}...`
-      : props.description;
-
   return (
-    <Link href="../profiles/MentorProfile">
+    <Link href="../../../profiles/MentorProfile">
       <Card
         hoverable
         style={{ width: cardWidth }}
@@ -49,25 +44,16 @@ const MentorCard = (props: Card) => {
         </div>
         <div
           style={{
-            fontSize: screens.xs ? "12px" : "18px",
-            color: screens.xs ? "#888" : "#888",
+            fontSize: screens.xs ? "13px" : "22px",
+            color: screens.xs ? "#000" : "#000",
             marginBottom: "8px",
           }}
         >
-          {truncatedDescription}
+          {`멘토링 ${props.count}회`}
         </div>
-        {hashtags.map((tag) => (
-          <div
-            key={tag}
-            style={{
-              fontSize: screens.xs ? "10px" : "15px",
-              color: screens.xs ? "#222" : "#222",
-            }}
-          >{`#${tag}`}</div>
-        ))}
       </Card>
     </Link>
   );
 };
 
-export default MentorCard;
+export default RankingCard;

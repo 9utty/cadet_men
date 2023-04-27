@@ -1,11 +1,12 @@
 import React from "react";
 import AppLayout from "../global/AppLayout";
+import MenuRanking from "./\bcomponents/MenuRanking";
 
 const Ranking = () => {
   return (
     <>
       <AppLayout>
-        <div style={{ color: "black" }}>랭킹입니다.</div>
+        <MenuRanking />
       </AppLayout>
     </>
   );
