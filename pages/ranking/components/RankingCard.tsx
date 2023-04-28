@@ -51,7 +51,7 @@ const RankingCard = (props: Card) => {
                         ? "silver"
                         : "brown",
                     fontSize: "30px",
-                    position: "absolute",ㄱ
+                    position: "absolute",
                     top: 0,
                     right: 0,
                   }}
