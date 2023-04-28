@@ -31,9 +31,14 @@ const MentorCard = (props: Card) => {
             preview={false}
             alt="example"
             src={props.image}
-            height={screens.xs ? 120 : 240}
-            width={screens.xs ? 120 : 240}
-            style={{ objectFit: "cover", borderRadius: "50%" }}
+            height={screens.xs ? 110 : 220}
+            width={screens.xs ? 110 : 220}
+            style={{
+              objectFit: "cover",
+              borderRadius: "50%",
+              marginLeft: screens.xs ? "5px" : "10px",
+              marginTop: screens.xs ? "5px" : "10px",
+            }}
           />
         }
       >
