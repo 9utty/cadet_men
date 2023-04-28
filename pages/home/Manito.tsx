@@ -32,13 +32,21 @@ export default function Manito() {
       >
         <Row gutter={[16, 16]}>
           {cards.map((card) => (
-            <Col xs={12} sm={12} md={12} lg={8} xl={6} key={card}>
-              <MentorCard
-                image="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-                userNickName="gulee"
-                description="42Manito 프론트엔드 개발자입니다. 그리고 Rush03에서 보컬을 하고 있습니다."
-                hashtag={["Frontend", "Vocal"]}
-              />
+            <Col xs={24} sm={24} md={12} lg={12} xl={8} key={card}>
+              <div
+                style={{
+                  alignItems: "center",
+                  justifyContent: "center",
+                  display: "flex",
+                }}
+              >
+                <MentorCard
+                  image="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+                  userNickName="gulee"
+                  description="42Manito 프론트엔드 개발자입니다. 그리고 Rush03에서 보컬을 하고 있습니다."
+                  hashtag={["Frontend", "Vocal"]}
+                />
+              </div>
             </Col>
           ))}
         </Row>

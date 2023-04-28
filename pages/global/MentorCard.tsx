@@ -13,7 +13,7 @@ interface Card {
 
 const MentorCard = (props: Card) => {
   const screens = useBreakpoint();
-  const cardWidth = screens.xs ? 120 : 240;
+  const cardWidth = screens.xs ? 240 : 360;
   const hashtags = props.hashtag.slice(0, 2);
   const maxDescriptionLength = screens.xs ? 32 : 40;
   const truncatedDescription =
@@ -31,13 +31,13 @@ const MentorCard = (props: Card) => {
             preview={false}
             alt="example"
             src={props.image}
-            height={screens.xs ? 110 : 220}
-            width={screens.xs ? 110 : 220}
+            height={screens.xs ? 220 : 320}
+            width={screens.xs ? 220 : 320}
             style={{
               objectFit: "cover",
               borderRadius: "50%",
-              marginLeft: screens.xs ? "5px" : "10px",
-              marginTop: screens.xs ? "5px" : "10px",
+              marginLeft: screens.xs ? "10px" : "20px",
+              marginTop: screens.xs ? "10px" : "20px",
             }}
           />
         }
