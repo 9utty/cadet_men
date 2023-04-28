@@ -20,15 +20,7 @@ const MonthlyRanking = () => {
                 image={Mentors[0].image}
                 userNickName={Mentors[0].userNickName}
                 count={442}
-              />
-              <FaCrown
-                style={{
-                  color: "gold",
-                  fontSize: "30px",
-                  position: "absolute",
-                  top: 0,
-                  right: 0,
-                }}
+                rank={1}
               />
             </div>
           </Col>
@@ -41,15 +33,7 @@ const MonthlyRanking = () => {
               image={Mentors[0].image}
               userNickName={Mentors[0].userNickName}
               count={410}
-            />
-            <FaCrown
-              style={{
-                color: "silver",
-                fontSize: "30px",
-                position: "absolute",
-                top: 0,
-                right: 0,
-              }}
+              rank={2}
             />
           </div>
         </Col>
@@ -59,15 +43,7 @@ const MonthlyRanking = () => {
               image={Mentors[0].image}
               userNickName={Mentors[0].userNickName}
               count={400}
-            />
-            <FaCrown
-              style={{
-                color: "brown",
-                fontSize: "30px",
-                position: "absolute",
-                top: 0,
-                right: 0,
-              }}
+              rank={3}
             />
           </div>
         </Col>
