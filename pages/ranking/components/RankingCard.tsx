@@ -16,7 +16,7 @@ interface Card {
 
 const RankingCard = (props: Card) => {
   const screens = useBreakpoint();
-  const cardWidth = screens.xs ? 120 : 240;
+  const cardWidth = screens.xs ? 140 : 320;
   const maxDescriptionLength = screens.xs ? 32 : 40;
 
   return (
@@ -32,13 +32,13 @@ const RankingCard = (props: Card) => {
                 preview={false}
                 alt="example"
                 src={props.image}
-                height={screens.xs ? 110 : 220}
-                width={screens.xs ? 110 : 220}
+                height={screens.xs ? 120 : 300}
+                width={screens.xs ? 120 : 300}
                 style={{
                   objectFit: "cover",
                   borderRadius: "50%",
-                  marginLeft: screens.xs ? "5px" : "10px",
-                  marginTop: screens.xs ? "5px" : "10px",
+                  marginLeft: screens.xs ? "10px" : "10px",
+                  marginTop: screens.xs ? "10px" : "10px",
                 }}
               />
               {props.rank <= 3 ? (

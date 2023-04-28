@@ -28,7 +28,13 @@ const MonthlyRanking = () => {
       </div>
       <Row style={{ marginBottom: "20px", marginTop: "20px" }}>
         <Col span={12}>
-          <div style={{ position: "relative" }}>
+          <div
+            style={{
+              alignItems: "center",
+              justifyContent: "center",
+              display: "flex",
+            }}
+          >
             <RankingCard
               image={Mentors[0].image}
               userNickName={Mentors[0].userNickName}
@@ -38,7 +44,13 @@ const MonthlyRanking = () => {
           </div>
         </Col>
         <Col span={12}>
-          <div style={{ position: "relative" }}>
+          <div
+            style={{
+              alignItems: "center",
+              justifyContent: "center",
+              display: "flex",
+            }}
+          >
             <RankingCard
               image={Mentors[0].image}
               userNickName={Mentors[0].userNickName}
