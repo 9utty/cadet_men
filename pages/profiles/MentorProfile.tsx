@@ -70,7 +70,7 @@ const MentorProfile = (props: ProfileProps) => {
               alignItems: "center",
             }}
           >
-            <Button>참여하기</Button>
+            <Button>Conect</Button>
           </div>
         </Col>
         <Divider />
