@@ -32,7 +32,7 @@ export default function Manito() {
       >
         <Row gutter={[16, 16]}>
           {cards.map((card) => (
-            <Col xs={24} sm={24} md={12} lg={12} xl={8} key={card}>
+            <Col xs={24} sm={24} md={12} lg={12} xl={8} xxl={6} key={card}>
               <div
                 style={{
                   alignItems: "center",

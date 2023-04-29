@@ -33,6 +33,7 @@ const HobbyCategory = () => {
             md={12}
             lg={12}
             xl={8}
+            xxl={6}
             key={index}
             style={{ marginTop: "20px" }}
           >
