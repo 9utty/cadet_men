@@ -28,27 +28,27 @@ const HeaderNav = () => {
         >
           <Link href="/home/Manito" passHref legacyBehavior>
             <a>
-              <div style={{ fontSize: "20px", color: "#000" }}>42 Manito</div>
+              <div style={{ fontSize: "25px", color: "#000" }}>42Manito</div>
             </a>
           </Link>
         </Menu.Item>
         <Menu.Item>
           <Link href="/category/Category" passHref legacyBehavior>
             <a style={{ display: "inline-block", paddingTop: "13px" }}>
-              <HiHashtag style={{ fontSize: "20px" }} />
+              <HiHashtag style={{ fontSize: "25px" }} />
             </a>
           </Link>
         </Menu.Item>
         <Menu.Item>
           <Link href="/login/Login" passHref legacyBehavior>
             <a style={{ display: "inline-block", paddingTop: "13px" }}>
-              <FaRegUser style={{ fontSize: "20px" }} />
+              <FaRegUser style={{ fontSize: "25px" }} />
             </a>
           </Link>
         </Menu.Item>
         <Menu.Item onClick={showDrawer}>
           <a style={{ display: "inline-block", paddingTop: "13px" }}>
-            <HiMenu style={{ fontSize: "20px" }} />
+            <HiMenu style={{ fontSize: "25px" }} />
           </a>
         </Menu.Item>
       </Menu>
