@@ -28,11 +28,11 @@ const HobbyCategory = () => {
       <Row style={{ marginBottom: "20px" }}>
         {hobbyMentors.map((mentor, index) => (
           <Col
-            xs={12}
-            sm={12}
+            xs={24}
+            sm={24}
             md={12}
-            lg={8}
-            xl={6}
+            lg={12}
+            xl={8}
             key={index}
             style={{ marginTop: "20px" }}
           >
