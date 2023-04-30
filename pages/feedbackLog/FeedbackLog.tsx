@@ -1,6 +1,5 @@
 import React from "react";
-import Ap
-pLayout from "../global/AppLayout";
+import AppLayout from "../global/AppLayout";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 const FeedbackLog = () => {
