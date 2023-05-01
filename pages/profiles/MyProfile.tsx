@@ -1,6 +1,52 @@
 import React from "react";
 import AppLayout from "../global/AppLayout";
 import { Image, Grid, Row, Col, Rate, Divider, Button, Statistic } from "antd";
+import { styled } from "@mui/material/styles";
+import Rating, { IconContainerProps } from "@mui/material/Rating";
+import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
+import SentimentDissatisfiedIcon from "@mui/icons-material/SentimentDissatisfied";
+import SentimentSatisfiedIcon from "@mui/icons-material/SentimentSatisfied";
+import SentimentSatisfiedAltIcon from "@mui/icons-material/SentimentSatisfiedAltOutlined";
+import SentimentVerySatisfiedIcon from "@mui/icons-material/SentimentVerySatisfied";
+
+const StyledRating = styled(Rating)(({ theme }) => ({
+  "& .MuiRating-iconEmpty .MuiSvgIcon-root": {
+    color: theme.palette.action.disabled,
+  },
+}));
+
+const customIcons: {
+  [index: string]: {
+    icon: React.ReactElement;
+    label: string;
+  };
+} = {
+  1: {
+    icon: <SentimentVeryDissatisfiedIcon color="error" />,
+    label: "Very Dissatisfied",
+  },
+  2: {
+    icon: <SentimentDissatisfiedIcon color="error" />,
+    label: "Dissatisfied",
+  },
+  3: {
+    icon: <SentimentSatisfiedIcon color="warning" />,
+    label: "Neutral",
+  },
+  4: {
+    icon: <SentimentSatisfiedAltIcon color="success" />,
+    label: "Satisfied",
+  },
+  5: {
+    icon: <SentimentVerySatisfiedIcon color="success" />,
+    label: "Very Satisfied",
+  },
+};
+
+function IconContainer(props: IconContainerProps) {
+  const { value, ...other } = props;
+  return <span {...other}>{customIcons[value].icon}</span>;
+}
 
 const { useBreakpoint } = Grid;
 
@@ -92,7 +138,6 @@ const MyProfile = (props: ProfileProps) => {
             >
               Mentor
             </div>
-            <Rate disabled defaultValue={2} />
           </div>
         </Col>
         <Col xs={24} sm={24}>
@@ -113,7 +158,14 @@ const MyProfile = (props: ProfileProps) => {
             >
               Mentee
             </div>
-            <Rate disabled value={2.5} />
+            <StyledRating
+              name="highlight-selected-only"
+              defaultValue={Math.floor(3.9)}
+              IconContainerComponent={IconContainer}
+              getLabelText={(value: number) => customIcons[value].label}
+              highlightSelectedOnly
+              readOnly={true}
+            />
           </div>
         </Col>
         <Divider />
