@@ -1,6 +1,7 @@
 import React from "react";
 import AppLayout from "../global/AppLayout";
 import { Image, Grid, Row, Col, Rate, Divider, Button, Statistic } from "antd";
+import MuiRate from "../global/MuiRate";
 
 const { useBreakpoint } = Grid;
 
@@ -92,6 +93,7 @@ const MyProfile = (props: ProfileProps) => {
             >
               Mentor
             </div>
+            <MuiRate IsReadOnly={true} Value={2.5} />
           </div>
         </Col>
         <Col xs={24} sm={24}>
@@ -112,6 +114,7 @@ const MyProfile = (props: ProfileProps) => {
             >
               Mentee
             </div>
+            <MuiRate IsReadOnly={true} Value={4.5} />
           </div>
         </Col>
         <Divider />
