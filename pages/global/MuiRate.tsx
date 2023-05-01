@@ -52,11 +52,17 @@ interface MuiRateProps {
 }
 
 const MuiRate = (props: MuiRateProps) => {
+  let value;
+  if (props.Value < 1) {
+    value = 1;
+  } else {
+    value = props.Value;
+  }
   return (
     <>
       <StyledRating
         name="highlight-selected-only"
-        defaultValue={Math.floor(props.Value)}
+        defaultValue={Math.floor(value)}
         IconContainerComponent={IconContainer}
         getLabelText={(value: number) => customIcons[value].label}
         highlightSelectedOnly
