@@ -113,7 +113,7 @@ const MyProfile = (props: ProfileProps) => {
             >
               Mentee
             </div>
-            <Rate disabled defaultValue={2} />
+            <Rate disabled value={2.5} />
           </div>
         </Col>
         <Divider />
