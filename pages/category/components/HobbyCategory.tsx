@@ -37,13 +37,21 @@ const HobbyCategory = () => {
             key={index}
             style={{ marginTop: "20px" }}
           >
-            <MentorCard
-              key={index}
-              image={mentor.image}
-              userNickName={mentor.userNickName}
-              description={mentor.description}
-              hashtag={mentor.hashtag}
-            />
+            <div
+              style={{
+                justifyContent: "center",
+                alignItems: "center",
+                display: "flex",
+              }}
+            >
+              <MentorCard
+                key={index}
+                image={mentor.image}
+                userNickName={mentor.userNickName}
+                description={mentor.description}
+                hashtag={mentor.hashtag}
+              />
+            </div>
           </Col>
         ))}
       </Row>
