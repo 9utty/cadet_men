@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Menu, Input, Drawer } from "antd";
 import { FaRegUser } from "react-icons/fa";
 import { HiHashtag, HiMenu } from "react-icons/hi";
+import Router from "next/router";
+import SearchInput from "./InputSearch";
 
 const HeaderNav = () => {
   const [visible, setVisible] = useState(false);
@@ -14,6 +16,11 @@ const HeaderNav = () => {
   const onClose = () => {
     setVisible(false);
   };
+
+  const handleSearch = (value: string) => {
+    Router.push(`/search/${value}`);
+  };
+
   return (
     <div>
       <Menu
@@ -75,7 +82,7 @@ const HeaderNav = () => {
       </Drawer>
       <Menu theme="dark" mode="horizontal" multiple={true}>
         <Menu.Item style={{ flex: 2 }}>
-          <Input.Search enterButton style={{ verticalAlign: "middle" }} />
+          <SearchInput />
         </Menu.Item>
       </Menu>
     </div>

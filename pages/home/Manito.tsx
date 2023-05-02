@@ -1,58 +1,71 @@
-import React, { useState, useEffect } from "react";
-import AppLayout from "../global/components/AppLayout";
-import MentorCard from "../global/components/MentorCard";
+import React, { useState } from "react";
 import { Row, Col, Spin } from "antd";
 import InfiniteScroll from "react-infinite-scroll-component";
+import MentorCard from "../global/components/MentorCard";
+import { mockUsers } from "../test/mockUsers";
+import AppLayout from "../global/components/AppLayout";
 import HomeEnroll from "./components/Enroll";
 
-export default function Manito() {
-  const [cards, setCards] = useState(Array.from({ length: 12 }, (_, i) => i)); // 초기 데이터
+const Manito = () => {
+  const [cards, setCards] = useState(mockUsers.slice(0, 12));
 
   const fetchMoreData = () => {
-    // 추가 데이터 불러오기
-    setCards([
-      ...cards,
-      ...Array.from({ length: 12 }, (_, i) => i + cards.length),
-    ]);
+    if (cards.length >= mockUsers.length) {
+      return; // 모든 데이터를 불러왔으면 추가로 더 불러오지 않음
+    }
+    const nextCards = mockUsers.slice(cards.length, cards.length + 12);
+    setCards([...cards, ...nextCards]);
   };
 
   return (
-    <AppLayout>
-      <InfiniteScroll
-        dataLength={cards.length}
-        next={fetchMoreData}
-        hasMore={true} // 추가 데이터가 더 있는 경우
-        loader={
-          <div
-            className="example"
-            style={{ verticalAlign: "middle", alignContent: "center" }}
-          >
-            <Spin />
-          </div>
-        }
-      >
-        <HomeEnroll />
-        <Row gutter={[16, 16]}>
-          {cards.map((card) => (
-            <Col xs={24} sm={24} md={12} lg={12} xl={8} xxl={6} key={card}>
-              <div
-                style={{
-                  alignItems: "center",
-                  justifyContent: "center",
-                  display: "flex",
-                }}
+    <div>
+      <AppLayout>
+        <InfiniteScroll
+          dataLength={cards.length}
+          next={fetchMoreData}
+          hasMore={cards.length < mockUsers.length}
+          loader={
+            <div
+              className="example"
+              style={{ verticalAlign: "middle", alignContent: "center" }}
+            >
+              <Spin />
+            </div>
+          }
+        >
+          <HomeEnroll />
+          <Row gutter={[16, 16]}>
+            {cards.map((card) => (
+              <Col
+                xs={24}
+                sm={24}
+                md={12}
+                lg={12}
+                xl={8}
+                xxl={6}
+                key={card.uId}
               >
-                <MentorCard
-                  image="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-                  userNickName="gulee"
-                  description="42Manito 프론트엔드 개발자입니다. 그리고 Rush03에서 보컬을 하고 있습니다."
-                  hashtag={["Frontend", "Vocal"]}
-                />
-              </div>
-            </Col>
-          ))}
-        </Row>
-      </InfiniteScroll>
-    </AppLayout>
+                <div
+                  style={{
+                    alignItems: "center",
+                    justifyContent: "center",
+                    display: "flex",
+                  }}
+                >
+                  <MentorCard
+                    image={card.Image}
+                    description={card.Description}
+                    userNickName={card.NickName}
+                    hashtag={card.hashtag}
+                  />
+                </div>
+              </Col>
+            ))}
+          </Row>
+        </InfiniteScroll>
+      </AppLayout>
+    </div>
   );
-}
+};
+
+export default Manito;
