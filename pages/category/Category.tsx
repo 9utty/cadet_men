@@ -1,6 +1,6 @@
 import React from "react";
 import App from "../_app";
-import AppLayout from "../global/AppLayout";
+import AppLayout from "../global/components/AppLayout";
 import Link from "next/link";
 import { Menu, Row, Col, Divider } from "antd";
 import MenuCategory from "./components/MenuCategory";

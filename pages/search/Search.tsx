@@ -1,4 +1,4 @@
-import AppLayout from "../global/AppLayout";
+import AppLayout from "../global/components/AppLayout";
 
 export default function Search() {
   return (

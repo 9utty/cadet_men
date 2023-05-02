@@ -16,8 +16,8 @@ interface Card {
 
 const RankingCard = (props: Card) => {
   const screens = useBreakpoint();
-  const cardWidth = screens.xs ? 140 : 320;
-  const maxDescriptionLength = screens.xs ? 32 : 40;
+  const cardWidth = screens.md ? 280 : 140;
+  const maxDescriptionLength = screens.md ? 40 : 32;
 
   return (
     <Link href="../../../profiles/MentorProfile">
@@ -32,13 +32,13 @@ const RankingCard = (props: Card) => {
                 preview={false}
                 alt="example"
                 src={props.image}
-                height={screens.xs ? 120 : 300}
-                width={screens.xs ? 120 : 300}
+                height={screens.md ? 260 : 120}
+                width={screens.md ? 260 : 120}
                 style={{
                   objectFit: "cover",
                   borderRadius: "50%",
-                  marginLeft: screens.xs ? "10px" : "10px",
-                  marginTop: screens.xs ? "10px" : "10px",
+                  marginLeft: screens.md ? "10px" : "10px",
+                  marginTop: screens.md ? "10px" : "10px",
                 }}
               />
               {props.rank <= 3 ? (
@@ -62,8 +62,8 @@ const RankingCard = (props: Card) => {
         >
           <div
             style={{
-              fontSize: screens.xs ? "15px" : "25px",
-              color: screens.xs ? "#000" : "#000",
+              fontSize: screens.md ? "25px" : "15px",
+              color: screens.md ? "#000" : "#000",
               fontWeight: "bold",
               marginBottom: "8px",
             }}
@@ -72,8 +72,8 @@ const RankingCard = (props: Card) => {
           </div>
           <div
             style={{
-              fontSize: screens.xs ? "11px" : "22px",
-              color: screens.xs ? "#000" : "#000",
+              fontSize: screens.md ? "22px" : "11px",
+              color: screens.md ? "#000" : "#000",
               marginBottom: "8px",
             }}
           >

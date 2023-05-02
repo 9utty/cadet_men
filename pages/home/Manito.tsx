@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import AppLayout from "../global/AppLayout";
+import AppLayout from "../global/components/AppLayout";
 import MentorCard from "../global/MentorCard";
 import { Row, Col, Spin } from "antd";
 import InfiniteScroll from "react-infinite-scroll-component";

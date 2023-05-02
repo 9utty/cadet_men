@@ -1,6 +1,6 @@
 import React from "react";
 import { Divider, Row, Col } from "antd";
-import AppLayout from "../../global/AppLayout";
+import AppLayout from "../../global/components/AppLayout";
 import MentorCard from "../../global/MentorCard";
 import MenuCategory from "./MenuCategory";
 

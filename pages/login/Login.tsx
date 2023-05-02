@@ -1,5 +1,5 @@
 import React from "react";
-import AppLayout from "../global/AppLayout";
+import AppLayout from "../global/components/AppLayout";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/reducer";
 import MyProfile from "../profiles/MyProfile";
