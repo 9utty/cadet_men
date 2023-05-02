@@ -1,6 +1,6 @@
 import React from "react";
 import AppLayout from "../global/components/AppLayout";
-import MenuRanking from "./\bcomponents/MenuRanking";
+import MenuRanking from "./components/MenuRanking";
 
 const Ranking = () => {
   return (

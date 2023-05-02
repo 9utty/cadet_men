@@ -1,7 +1,7 @@
 import React from "react";
 import AppLayout from "../global/components/AppLayout";
 import { Image, Grid, Row, Col, Rate, Divider, Button, Statistic } from "antd";
-import MuiRate from "../global/MuiRate";
+import MuiRate from "../global/components/MuiRate";
 import ProfileUpdate from "./components/ProfileSetting";
 
 const { useBreakpoint } = Grid;
@@ -64,17 +64,6 @@ const MyProfile = (props: ProfileProps) => {
             </div>
           </Col>
         </Row>
-        <Col xs={24} sm={24}>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Button>수정하기</Button>
-          </div>
-        </Col>
         <Divider />
         <Col xs={24} sm={24}>
           <div

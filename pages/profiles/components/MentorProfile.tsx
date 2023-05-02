@@ -1,7 +1,7 @@
 import React from "react";
 import AppLayout from "../../global/components/AppLayout";
 import { Image, Grid, Row, Col, Rate, Divider, Button, Statistic } from "antd";
-import MuiRate from "../../global/MuiRate";
+import MuiRate from "../../global/components/MuiRate";
 
 const { useBreakpoint } = Grid;
 
