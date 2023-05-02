@@ -3,6 +3,7 @@ import AppLayout from "../global/AppLayout";
 import MentorCard from "../global/MentorCard";
 import { Row, Col, Spin } from "antd";
 import InfiniteScroll from "react-infinite-scroll-component";
+import HomeEnroll from "./components/Enroll";
 
 export default function Manito() {
   const [cards, setCards] = useState(Array.from({ length: 12 }, (_, i) => i)); // 초기 데이터
@@ -30,6 +31,7 @@ export default function Manito() {
           </div>
         }
       >
+        <HomeEnroll />
         <Row gutter={[16, 16]}>
           {cards.map((card) => (
             <Col xs={24} sm={24} md={12} lg={12} xl={8} xxl={6} key={card}>

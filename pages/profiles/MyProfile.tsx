@@ -2,6 +2,7 @@ import React from "react";
 import AppLayout from "../global/AppLayout";
 import { Image, Grid, Row, Col, Rate, Divider, Button, Statistic } from "antd";
 import MuiRate from "../global/MuiRate";
+import ProfileUpdate from "./components/ProfileSetting";
 
 const { useBreakpoint } = Grid;
 
@@ -132,6 +133,7 @@ const MyProfile = (props: ProfileProps) => {
         </Col>
         <Divider />
       </Row>
+      <ProfileUpdate />
     </AppLayout>
   );
 };
