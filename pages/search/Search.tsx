@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
 import { mockUsers } from "../test/mockUsers";
 import MentorCard from "../global/components/MentorCard";
-import { Row, Col, Spin } from "antd";
+import { Row, Col, Spin, Divider } from "antd";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 interface User {
@@ -71,10 +71,21 @@ const Search = () => {
   return (
     <AppLayout>
       {loading ? (
-        <div>Loading...</div>
+        <Spin />
       ) : (
         <>
-          <div style={{ color: "black" }}>검색어: {query}</div>
+          <div
+            style={{
+              color: "#000",
+              justifyContent: "center",
+              alignItems: "center",
+              display: "flex",
+              fontSize: "20px",
+            }}
+          >
+            검색어: {query}
+          </div>
+          <Divider />
 
           {hasMoreResults && (
             <div
@@ -84,7 +95,7 @@ const Search = () => {
                 marginBottom: "20px",
               }}
             >
-              <Spin />
+              {loading ? <Spin /> : null}
             </div>
           )}
           <InfiniteScroll
@@ -99,7 +110,7 @@ const Search = () => {
                   marginBottom: "20px",
                 }}
               >
-                <Spin />
+                {loading ? <Spin /> : null}
               </div>
             }
           >
@@ -134,7 +145,16 @@ const Search = () => {
                   </Col>
                 ))
               ) : (
-                <div>검색 결과가 없습니다.</div>
+                <div
+                  style={{
+                    fontSize: "20px",
+                    fontWeight: "bold",
+                    color: "#000",
+                    paddingLeft: "10px",
+                  }}
+                >
+                  {query} : 검색결과를 찾을 수 없습니다.
+                </div>
               )}
             </Row>
           </InfiniteScroll>
