@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Row, Col, Spin } from "antd";
+import { Row, Col, Spin, Divider } from "antd";
 import InfiniteScroll from "react-infinite-scroll-component";
 import MentorCard from "../global/components/MentorCard";
 import { mockUsers } from "../test/mockUsers";
