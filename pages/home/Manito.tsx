@@ -50,6 +50,7 @@ const Manito = () => {
                     alignItems: "center",
                     justifyContent: "center",
                     display: "flex",
+                    paddingBottom: "20px",
                   }}
                 >
                   <MentorCard

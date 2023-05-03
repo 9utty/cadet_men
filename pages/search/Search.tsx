@@ -15,7 +15,7 @@ interface User {
   hashtag: string[];
 }
 
-export default function Search() {
+const Search = () => {
   const [searchResults, setSearchResults] = useState<User[]>([]);
   const [loading, setLoading] = useState(true);
   const [hasMoreResults, setHasMoreResults] = useState(true);
@@ -120,6 +120,7 @@ export default function Search() {
                         alignItems: "center",
                         justifyContent: "center",
                         display: "flex",
+                        paddingBottom: "20px",
                       }}
                     >
                       <MentorCard
@@ -141,4 +142,6 @@ export default function Search() {
       )}
     </AppLayout>
   );
-}
+};
+
+export default Search;
